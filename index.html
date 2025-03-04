@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bonjour, je suis <span class="highlight">Rguig Djébril</span></h1>
+            <h2>Apprenti Développeur Web</h2>
+            <p>Création de sites web modernes et responsives</p>
+            <a href="#contact" class="btn">Me contacter</a>
+        </div>
+    </section>
+
+    <section id="a-propos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis Rguig Djébril, étudiant en première année de développement informatique au CESI. Passionné par la programmation, j’explore divers langages et technologies pour créer des projets web et logiciels. Ce portfolio présente mes réalisations et mon évolution dans le domaine du développement.
+
+                        🚀 Bonne visite !</p>
+
+                </div>
+                <div class="about-image">
+                    <div class="img-placeholder">Votre Photo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/jeu-de-loie.jpg" alt="Jeu de l'Oie en Python" class="project-image">
+                    </div>
+                    <h3>Jeu de l'Oie en Python</h3>
+                    <p>Développement d'un jeu de l'oie interactif avec interface graphique, pions, dés et cases spéciales (oies, puits, labyrinthe, etc.).</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                    </div>
+                    <a href="#" class="btn-small">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/siteanime.jpg" alt="Répertoire des Animes" class="project-image">
+                    </div>
+                    <h3>Catalogue d'Anime</h3>
+                    <p>Site web répertoriant des animes via une base de données avec système de recherche et filtrage.</p>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>MySQL</span>
+                        <span>Node.js</span>
+                    </div>
+                    <a href="#" class="btn-small">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">Portfolio</div>
+                    <h3>Projet Portfolio</h3>
+                    <p>Conception et développement de ce portfolio responsive pour présenter mes compétences et réalisations.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="btn-small">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Me contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>rg.djebril@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Téléphone</h3>
+                        <p>+33 6 51 68 46 25</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Localisation</h3>
+                        <p>Nancy, France</p>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Rguig Djébril. </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
