@@ -12,13 +12,13 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #e0e0e0;
+    background-color: #121212;
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #e0e0e0;
 }
 
 ul {
@@ -46,7 +46,7 @@ ul {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background-color: #4d76fd;
+    background-color: #bb86fc;
 }
 
 section {
@@ -55,7 +55,7 @@ section {
 
 .btn {
     display: inline-block;
-    background-color: #4d76fd;
+    background-color: #bb86fc;
     color: white;
     padding: 12px 28px;
     border-radius: 30px;
@@ -67,13 +67,13 @@ section {
 }
 
 .btn:hover {
-    background-color: #3a63e0;
+    background-color: #3700b3;
 }
 
 .btn-small {
     padding: 8px 18px;
     font-size: 0.9rem;
-    background-color: #4d76fd;
+    background-color: #bb86fc;
     color: white;
     border-radius: 20px;
     display: inline-block;
@@ -81,11 +81,11 @@ section {
 }
 
 .btn-small:hover {
-    background-color: #3a63e0;
+    background-color: #3700b3;
 }
 
 .highlight {
-    color: #4d76fd;
+    color: #bb86fc;
 }
 
 /* Navigation */
@@ -94,8 +94,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
@@ -111,7 +111,7 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #4d76fd;
+    color: #bb86fc;
 }
 
 .nav-links {
@@ -133,7 +133,7 @@ nav {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #4d76fd;
+    background-color: #bb86fc;
     transition: width 0.3s;
 }
 
@@ -149,7 +149,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #e0e0e0;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -161,8 +161,8 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #f5f8ff;
-    background-image: linear-gradient(135deg, #f5f8ff 0%, #dfe9f3 100%);
+    background-color: #1f1f1f;
+    background-image: linear-gradient(135deg, #1f1f1f 0%, #1a1a1a 100%);
     padding-top: 80px;
 }
 
@@ -179,18 +179,18 @@ nav {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #666;
+    color: #aaaaaa;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #777;
+    color: #cccccc;
 }
 
 /* About Section */
 .about {
-    background-color: white;
+    background-color: #1e1e1e;
 }
 
 .about-content {
@@ -217,19 +217,19 @@ nav {
 .img-placeholder {
     width: 300px;
     height: 300px;
-    background-color: #e7eeff;
+    background-color: #2e2e2e;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4d76fd;
+    color: #bb86fc;
     font-weight: 600;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Skills Section */
 .skills {
-    background-color: #f5f8ff;
+    background-color: #1f1f1f;
 }
 
 .skills-container {
@@ -239,10 +239,10 @@ nav {
 }
 
 .skill-card {
-    background-color: white;
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .skill-card h3 {
@@ -251,20 +251,20 @@ nav {
 
 .skill-bar {
     height: 10px;
-    background-color: #e7eeff;
+    background-color: #2e2e2e;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .skill-level {
     height: 100%;
-    background-color: #4d76fd;
+    background-color: #bb86fc;
     border-radius: 5px;
 }
 
 /* Projects Section */
 .projects {
-    background-color: white;
+    background-color: #1e1e1e;
 }
 
 .projects-grid {
@@ -274,25 +274,25 @@ nav {
 }
 
 .project-card {
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .project-img {
     height: 200px;
-    background-color: #e7eeff;
+    background-color: #2e2e2e;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4d76fd;
+    color: #bb86fc;
     font-weight: 600;
     overflow: hidden;
 }
@@ -310,7 +310,7 @@ nav {
 
 .project-card p {
     padding: 0 20px 15px;
-    color: #666;
+    color: #aaaaaa;
 }
 
 .project-tags {
@@ -319,8 +319,8 @@ nav {
 
 .project-tags span {
     display: inline-block;
-    background-color: #e7eeff;
-    color: #4d76fd;
+    background-color: #2e2e2e;
+    color: #bb86fc;
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -334,7 +334,7 @@ nav {
 
 /* Contact Section */
 .contact {
-    background-color: #f5f8ff;
+    background-color: #1f1f1f;
 }
 
 .contact-content {
@@ -351,7 +351,7 @@ nav {
 
 .contact-item h3 {
     margin-bottom: 5px;
-    color: #4d76fd;
+    color: #bb86fc;
 }
 
 .contact-social {
@@ -361,7 +361,7 @@ nav {
 }
 
 .social-link {
-    background-color: #4d76fd;
+    background-color: #bb86fc;
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
@@ -369,14 +369,14 @@ nav {
 }
 
 .social-link:hover {
-    background-color: #3a63e0;
+    background-color: #3700b3;
 }
 
 .contact-form {
-    background-color: white;
+    background-color: #1e1e1e;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .form-group {
@@ -393,23 +393,25 @@ nav {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 5px;
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.3s;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #4d76fd;
+    border-color: #bb86fc;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #121212;
+    color: #e0e0e0;
     text-align: center;
     padding: 30px 0;
 }
@@ -431,14 +433,14 @@ footer {
         right: 0;
         height: 92vh;
         top: 8vh;
-        background-color: white;
+        background-color: #1e1e1e;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .nav-links li {
@@ -488,3 +490,69 @@ footer {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+/* Style pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Ajout de l'effet CSS pour l'animation au défilement */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .hero {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
