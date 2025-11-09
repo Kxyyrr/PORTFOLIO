@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation mobile
+    // ============================================
+    // NAVIGATION MOBILE
+    // ============================================
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    
-    // Toggle navigation
+
     burger.addEventListener('click', () => {
-        // Toggle navigation
         nav.classList.toggle('nav-active');
-        
-        // Animate links
+        burger.classList.toggle('toggle');
+
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -17,152 +17,176 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
         });
-        
-        // Burger animation
-        burger.classList.toggle('toggle');
     });
-    
-    // Fermer le menu lorsqu'un lien est cliqué
+
+    // Fermer le menu mobile au clic sur un lien
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('nav-active');
             burger.classList.remove('toggle');
-            
             navLinks.forEach(link => {
                 link.style.animation = '';
             });
         });
     });
-    
-    // Effet de défilement doux pour les liens d'ancrage
+
+    // ============================================
+    // SMOOTH SCROLLING
+    // ============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
             const targetElement = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    // Animation au défilement
-    const animateOnScroll = () => {
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight * 0.75) {
-                section.classList.add('appear');
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
             }
         });
+    });
+
+    // ============================================
+    // SCROLL ANIMATIONS
+    // ============================================
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
     };
-    
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Soumission du formulaire
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // ============================================
+    // CONTACT FORM
+    // ============================================
     const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Récupération des valeurs du formulaire
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject')?.value || 'Pas de sujet';
             const message = document.getElementById('message').value;
-            
-            // Dans un cas réel, vous enverriez ces données à un serveur
-            console.log('Formulaire soumis avec les données suivantes :');
+
+            console.log('=== Formulaire soumis ===');
             console.log('Nom:', name);
             console.log('Email:', email);
+            console.log('Sujet:', subject);
             console.log('Message:', message);
-            
-            // Réinitialisation du formulaire
-            contactForm.reset();
-            
-            // Affichage d'une alerte de confirmation
-            alert('Merci pour votre message ! Je vous répondrai dès que possible.');
+            console.log('========================');
+
+            // Animation du bouton
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>✓ Message envoyé !</span>';
+            submitBtn.style.background = '#4caf50';
+
+            // Reset après 3 secondes
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+            }, 3000);
+
+            alert('✅ Merci pour votre message ! Je vous répondrai dès que possible.');
         });
     }
-    
-    // Animation des barres de compétences
-    const skillBars = document.querySelectorAll('.skill-level');
-    
+
+    // ============================================
+    // SKILLS ANIMATION
+    // ============================================
     const animateSkills = () => {
         const skillsSection = document.querySelector('.skills');
+        if (!skillsSection) return;
+
         const sectionTop = skillsSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
+
         if (sectionTop < windowHeight * 0.75) {
+            const skillBars = document.querySelectorAll('.skill-progress');
             skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                
+                const progress = bar.getAttribute('data-progress');
                 setTimeout(() => {
-                    bar.style.transition = 'width 1s ease';
-                    bar.style.width = width;
+                    bar.style.width = progress + '%';
                 }, 200);
             });
-            
             window.removeEventListener('scroll', animateSkills);
         }
     };
-    
+
     window.addEventListener('scroll', animateSkills);
-    
-    // Effet de parallaxe pour la section hero
-    const heroSection = document.querySelector('.hero');
-    
+    animateSkills(); // Check on load
+
+    // ============================================
+    // HEADER SCROLL EFFECT
+    // ============================================
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
     window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        
-        if (scrollPosition < window.innerHeight) {
-            heroSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+            header.style.padding = '0 5%';
+            header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.7)';
+        } else {
+            header.style.padding = '';
+            header.style.boxShadow = '';
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // ============================================
+    // IMAGE MODAL
+    // ============================================
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close');
+
+    // Ouvrir le modal au clic sur les images de projet
+    document.querySelectorAll('.project-image img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImage.src = img.src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Fermer le modal
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
-    
-    // Animation de chargement initial
+
+    // ============================================
+    // INITIAL LOAD ANIMATION
+    // ============================================
     setTimeout(() => {
         document.body.classList.add('loaded');
-    }, 300);
-});
-
-// Ajout de l'effet CSS pour l'animation au défilement
-document.addEventListener('DOMContentLoaded', () => {
-    const style = document.createElement('style');
-    style.textContent = `
-        section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-        
-        section.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        body.loaded .hero {
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    `;
-    
-    document.head.appendChild(style);
+    }, 100);
 });

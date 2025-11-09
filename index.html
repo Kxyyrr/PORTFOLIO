@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Djébril Rguig - Développeur Web</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Portfolio</div>
+            <div class="logo">
+                <span class="logo-initial">DR</span>
+                <span class="logo-text">Djébril</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#a-propos">À propos</a></li>
@@ -26,26 +29,77 @@
     </header>
 
     <section id="accueil" class="hero">
+        <div class="hero-background">
+            <div class="gradient-circle circle-1"></div>
+            <div class="gradient-circle circle-2"></div>
+            <div class="gradient-circle circle-3"></div>
+        </div>
         <div class="hero-content">
-            <h1>Bonjour, je suis <span class="highlight">Rguig Djébril</span></h1>
-            <h2>Apprenti Développeur Web</h2>
-            <p>Création de sites web modernes et responsives</p>
-            <a href="#contact" class="btn">Me contacter</a>
+            <div class="hero-badge">👋 Bienvenue sur mon portfolio</div>
+            <h1 class="hero-title">
+                <span class="text-line">Bonjour, je suis</span>
+                <span class="text-line highlight-name">Djébril Rguig</span>
+            </h1>
+            <h2 class="hero-subtitle">Apprenti Développeur Web</h2>
+            <p class="hero-description">Je crée des expériences web modernes, responsives et performantes</p>
+            <div class="hero-cta">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
         </div>
     </section>
 
     <section id="a-propos" class="about">
         <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
+            <div class="section-header">
+                <span class="section-tag">🎯 Qui suis-je ?</span>
+                <h2 class="section-title">À propos de moi</h2>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Je suis Rguig Djébril, étudiant en première année de développement informatique au CESI. Passionné par la programmation, j’explore divers langages et technologies pour créer des projets web et logiciels. Ce portfolio présente mes réalisations et mon évolution dans le domaine du développement.
-
-                        🚀 Bonne visite !</p>
-
-                </div>
-                <div class="about-image">
-                    <div class="img-placeholder">Votre Photo</div>
+                <div class="about-card">
+                    <div class="about-image">
+                        <div class="img-wrapper">
+                            <img src="images/profile.jpg" alt="Djébril Rguig" class="img-placeholder">
+                            <div class="img-decoration"></div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3>Étudiant passionné en développement web</h3>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">2ème</span>
+                                    <span class="stat-label">Année CESI</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">4+</span>
+                                    <span class="stat-label">Projets</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">∞</span>
+                                    <span class="stat-label">Motivation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="about-description">
+                            Étudiant en deuxième année de développement informatique au CESI. Passionné par la programmation, 
+                            j'explore divers langages et technologies pour créer des projets web et mobiles innovants.
+                        </p>
+                        <p class="about-description">
+                            Ce portfolio présente certaines de mes réalisations et mon évolution dans le domaine du développement. 
+                            Chaque projet est une opportunité d'apprendre et de repousser mes limites. 
+                        </p>
+                        <div class="about-interests">
+                            <span class="interest-tag">💻 Dev Web</span>
+                            
+                            <span class="interest-tag">🚀 Innovation</span>
+                            <span class="interest-tag">📚 Apprentissage</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,30 +107,59 @@
 
     <section id="competences" class="skills">
         <div class="container">
-            <h2 class="section-title">Mes compétences</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>HTML5</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 100%"></div>
+            <div class="section-header">
+                <span class="section-tag">⚡ Mes compétences</span>
+                <h2 class="section-title">Technologies & Outils</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">💻 Langages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Dart</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <h3>CSS3</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 90%"></div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">🚀 Frameworks</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flutter</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Node.js</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 70%"></div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">🛠️ Logiciels</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">SQL Server</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Postman</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,44 +168,87 @@
 
     <section id="projets" class="projects">
         <div class="container">
-            <h2 class="section-title">Mes projets</h2>
+            <div class="section-header">
+                <span class="section-tag">💼 Portfolio</span>
+                <h2 class="section-title">Mes Projets</h2>
+                <p class="section-description">Découvrez quelques-uns de mes projets récents</p>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/jeu-de-loie.jpg" alt="Jeu de l'Oie en Python" class="project-image">
+                    <div class="project-image">
+                        <img src="images/flying-blue.jpg" alt="Flying Blue">
                     </div>
-                    <h3>Jeu de l'Oie en Python</h3>
-                    <p>Développement d'un jeu de l'oie interactif avec interface graphique, pions, dés et cases spéciales (oies, puits, labyrinthe, etc.).</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Tkinter</span>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Flying Blue</h3>
+                        </div>
+                        <p class="project-description">
+                            Plateforme web de réservation de vols avec système de recherche avancé, gestion des réservations et interface utilisateur moderne et intuitive.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Nodejs</span>
+                            <span class="tag">MSSQL</span>
+                        </div>
                     </div>
-                    <a href="#" class="btn-small">Voir le projet</a>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/siteanime.jpg" alt="Répertoire des Animes" class="project-image">
+                    <div class="project-image">
+                        <img src="images/messagerie.jpg" alt="Application de messagerie">
                     </div>
-                    <h3>Catalogue d'Anime</h3>
-                    <p>Site web répertoriant des animes via une base de données avec système de recherche et filtrage.</p>
-                    <div class="project-tags">
-                        <span>HTML/CSS</span>
-                        <span>JavaScript</span>
-                        <span>MySQL</span>
-                        <span>Node.js</span>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Appli mobile de messagerie</h3>
+                        </div>
+                        <p class="project-description">
+                            Application mobile de messagerie instantanée avec fonctionnalités de chat en groupe et partage de fichiers.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Dart</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Nodejs</span>
+                        </div>
                     </div>
-                    <a href="#" class="btn-small">Voir le projet</a>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-img">Portfolio</div>
-                    <h3>Projet Portfolio</h3>
-                    <p>Conception et développement de ce portfolio responsive pour présenter mes compétences et réalisations.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                    <div class="project-image">
+                        <img src="images/dashboard-mcorp.jpg" alt="Dashboard Mcorp">
                     </div>
-                    <a href="#" class="btn-small">Voir le projet</a>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Dashboard de travail Mcorp</h3>
+                        </div>
+                        <p class="project-description">
+                            Conception et développement de ce dashboard moderne et responsive pour la gestion des projets Mcorp.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Nodejs</span>
+                            <span class="tag">MSSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/serrure-connectee.jpg" alt="Serrure Connectée IoT">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Serrure Connectée IoT</h3>
+                        </div>
+                        <p class="project-description">
+                            Système de serrure intelligente contrôlable à distance avec authentification et historique d'accès.
+                        </p>
+                        <div class="project-tags">
+                            
+                            <span class="tag">Arduino</span>
+                            <span class="tag">HTML/CSS/JS</span>
+                            <span class="tag">Nodejs</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,42 +256,38 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Me contacter</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <p>rg.djebril@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Téléphone</h3>
-                        <p>+33 6 51 68 46 25</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Localisation</h3>
-                        <p>Nancy, France</p>
-                    </div>
-                    <div class="contact-social">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">GitHub</a>
-                    </div>
+            <div class="section-header">
+                <span class="section-tag">📬 Contact</span>
+                <h2 class="section-title">Restons en Contact</h2>
+                <p class="section-description">N'hésitez pas à me contacter pour discuter de vos projets ou opportunités</p>
+            </div>
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:rg.djebril@gmail.com">rg.djebril@gmail.com</a>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Envoyer</button>
-                    </form>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Téléphone</h3>
+                    <a href="tel:+33651684625">+33 6 51 68 46 25</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Localisation</h3>
+                    <p>Nancy, France</p>
+                </div>
+                <div class="contact-card social-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>Réseaux Sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/djebril-rguig-761bb130a/" target="_blank" class="social-btn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Kxyyrr" target="_blank" class="social-btn">
+                            <span>GitHub</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,9 +295,22 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 - Rguig Djébril. </p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">DR</div>
+                    <p>Développeur Web en formation</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2025 Djébril Rguig. Tous droits réservés.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <script src="script.js"></script>
 </body>
